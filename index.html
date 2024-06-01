@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lung Cancer Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+      body {
+         background-image: url('https://img.freepik.com/free-photo/3d-render-medical-background-with-lungs-covid-19-virus-cells_1048-15350.jpg?w=900&t=st=1704639894~exp=1704640494~hmac=b1df854221b355d57325458683315ef0100538a8d0384b3470d1687d511d08d5'); 
+         background-size: cover;
+         background-repeat: no-repeat;
+         height: 100vh;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Lung Cancer Prediction</h1>
+        <form id="upload-form" action="/predict" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="fileInput">Upload Lung Image:</label>
+                <input type="file" class="form-control-file" id="fileInput" name="file" accept=".jpg, .jpeg, .png">
+            </div>
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+        <div id="prediction-result" class="mt-4"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script>
+        // You can add any client-side scripting or handling of the prediction result here
+    </script>
+</body>
+</html>
+<!-- https://img.freepik.com/premium-vector/abstract-hexagonal-blue-light-technology-background-vector_569389-333.jpg?w=1060 -->
